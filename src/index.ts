@@ -15,8 +15,8 @@ const ai = AudioIO({
     inOptions: {
         channelCount: 2,
         sampleFormat: SampleFormat16Bit,
-        sampleRate: 44100,
-        deviceId: 47,
+        sampleRate: parseInt(process.env.SAMPLE_RATE || "44100"),
+        deviceId: parseInt(process.env.DEVICE_ID || "47"),
         closeOnError: true
     },
 });
